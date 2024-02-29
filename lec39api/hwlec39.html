@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOMEWORK </h1>
+    <button id="fetchButton">Fetch profile pic</button>
+    <br>
+    <img id="profilePicture" alt="Profile Picture">
+</body>
+<script>
+   
+    //project to make a button fetch pro pic of github
+        //Use XMLHttpRequest (XHR) objects to interact with servers.
+        //You can retrieve data from a URL without having to do a full page refresh.
+        // This enables a Web page to update just part of a page without disrupting what the user is doing.
+        
+        //here  XHR allow to fetch the details or many think of my github account in console 
+        document.addEventListener("DOMContentLoaded",function(){
+            const requestUrl = "https://api.github.com/users/riteshkrofficial"
+            const profilePicture = document.getElementById("profilePicture");
+             const fetchButton = document.getElementById("fetchButton");
+     
+              fetchButton.addEventListener("click",function(){
+    
+            
+              const xhr = new XMLHttpRequest()    //fresh object is made using new keyword
+              xhr.open('GET',requestUrl)
+              xhr.onreadystatechange=function(){
+                console.log(xhr.readyState);
+                if(xhr.readyState===4){
+                    if(xhr.status===200){
+                    const data = JSON.parse(this.responseText);
+                    console.log(data)
+                    const imageUrl = data.avatar_url;
+                    profilePicture.src = imageUrl;}
+                    else {
+                        console.error('Request failed with status:', xhr.status);
+                    }
+                    
+                }
+        
+              }
+              
+               xhr.send()
+    
+            });
+        });
+    
+    
+    
+        </script>
+    </html>
+</html>

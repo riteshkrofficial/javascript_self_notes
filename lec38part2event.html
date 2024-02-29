@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chay and code </title>
+</head>
+<body>
+  <h1>Chai aur code</h1>
+   <button id="stop">Stop</button>
+   <button id="prevent">Prevent </button>
+</body>
+<script>
+    //events syntax ex-> setTimeout(function(){},2000) 
+
+    //lets try an event 
+//    setTimeout(function(){
+//     console.log("Ritesh with in 2 sec print hoga ")
+//    },2000)
+     
+//    also same code can be written as function stored in a variable and its refrence is given like myTwoSecFun below
+// const myTwoSecFun = function(){
+//     console.log("Ritesh after 2 sec again ")
+// }
+// setTimeout(myTwoSecFun,2000) 
+
+//--------------->setTimeout says after given time it executes only ones 
+
+
+
+//setInterval
+const myTwoSecFun = function(){
+    console.log("Ritesh after 2 sec again ")
+}
+const stopMe = setInterval(myTwoSecFun,2000)
+
+//prevent button to stop the event of setInterval
+document.querySelector('#prevent').addEventListener('click',function(){
+    clearTimeout(stopMe)
+    console.log("PREVENTED")
+})
+
+
+//--------------->setInterval says give me time after which i will continiously do the task given 
+
+
+
+
+// Now here we are going to change h1 tag text using js   and then adding a event too lets see
+
+// document.querySelector('h1').innerHTML="best js series"
+// adding an event too  start from begining
+//in this chay aur code change to best js series with in 2 sec 
+//1(i)
+// const changeIt = function(){
+// document.querySelector('h1').innerHTML = "Best js series"
+// }
+// const changeMe = setTimeout(changeIt,2000) 
+
+
+//aur upr vale ko refrence dene ke liye variable me rap kr denge 
+//now here --------->clearTimeout used means upr vala event hone ke phle ye event chl gya to ruk jayega 
+//ex like we have used this event in button where it preevnt the above event 
+//1(ii)
+// document.querySelector('#stop').addEventListener('click',function(){
+//     clearTimeout(changeMe)
+//     console.log("STOPPED")
+// })
+    </script>
+</html>

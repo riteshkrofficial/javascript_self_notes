@@ -1,0 +1,27 @@
+oops and classes
+
+
+object ->collection of property and methods 
+
+
+
+why we use OOP ->avoid messhy code 
+
+
+
+constructor function
+prototype
+class
+instance(new,this)
+
+
+4pillars 
+abstraction 
+encapsulation 
+inheritance
+polymorphism 
+
+
+in this lec 42 what else i have studied:
+use of this keyword which define the data of current context also the this keyword scope in function is complete that is
+it fectch all he current object propery on doing console log inside the functional scope.

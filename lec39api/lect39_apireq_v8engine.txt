@@ -1,0 +1,7 @@
+// what is api ?
+// it is defined as a mediator or talking lang between frontend and backend for the communication and all purpose.
+// may be the lang of frontend and backend can differ no matter API led to the communication between them.
+
+
+most of the time the response come from url is of string formate in order to fech any property particularly the data
+is change from string to object type by parsing =>this is done in api1.html file go look

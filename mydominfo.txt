@@ -1,0 +1,63 @@
+differnce between textContent and innerText  in DOM
+
+textContent=> It provide all the text which is present in html file that is any text may be hided with the help 
+of css can also be visible by using property title.textContent 
+
+innerText=> THis property also fectch the text but if an css like ex span is added in html & css is used then
+it hide the span part text. 
+
+innerHtml=>THis property provide the text and also all inner html written in it ex =>Dom learning on chai and code \n     <span style="display: none;">  this part is not visible </span>\n\n 
+
+
+
+document.querySelector always select the first one from the top 
+
+example check and practice in console 
+document.querySelector('ul')
+<ul>​<li style=​"background-color:​ yellow;​">​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+const unorderlist =document.querySelector('ul')
+undefined
+unorderlist.querySelector('li')
+<li style=​"background-color:​ yellow;​">​::marker​"one "</li>​
+const yeel= unorderlist.querySelector('li')
+undefined
+yeel.style.backgroundColor="yellow"
+'yellow'
+
+document.querySelectorAll (return NodeList)
+above select all the class or id which the user extract but its not like querySelector here for manipulation like styling and all 
+can be done when u have to specify which element you want to alter particularly
+reason in query selector all wheather more same type of element is present or a single element u have to always specify its value for manipulation
+unlike in queryselector where by default it picks the first value and gets manipulated as per user . 
+
+example of manipulation done by me on the javascript wiki i.e;
+I change the color of heading tag using the queryselector all by lect32 #chai and code 
+
+here is the copied console code =>>
+document.querySelectorAll('.mw-headline')
+NodeList(75) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#jQuery.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Code_incompatibility.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline]
+const myH2= document.querySelectorAll('.mw-headline')
+undefined
+myH2[0].innerText
+'History'
+myH2.forEach(function(h){
+  h.style.color ='red'  })
+undefined
+myH2.forEach(function(h){
+  h.style.color ='red'   })
+undefined
+myH2.forEach(function(h){
+  h.style.color ='red';
+    h.style.backgroundColor ="yellow" 
+})
+undefined
+
+
+above i have  studied how to manipulate the NodeList and HtmlCollection using the dom functionality  lecture 32 and previous dom lect above 
+
+
+
+
+
+LECTURE 33 CREATION OF ELEMENT AND DISPALY THEM ALSO REMOVE THEM IN DOM MANIPULATION PARENT RELATIONSHIP ETC in html file part 1 and part 2 
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+function addLanguage(LangName){
+   const li = document.createElement('li');
+   li.innerHTML = `${LangName}`
+   document.querySelector('.language').appendChild(li); //adding a child element and is a pure dom method 
+
+}
+addLanguage("python")
+addLanguage("Typescript")
+//this above function of adding a language in html using the function and dom manipulation
+//it is not an optimize way for adding more languages because it always traverse from begining to end
+
+
+//now an optimize way of adding a li element like above is 
+
+function addOptiLanguage(LangName){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(LangName))
+    document.querySelector('.language').appendChild(li);
+}
+addOptiLanguage('C++')
+//above both add the value
+
+//now editing of the value python to mojo 
+
+const secondLang =document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "Mojo"
+const newLi = document.createElement('li')
+newLi.textContent ="Mojo"
+secondLang.replaceWith(newLi)
+
+
+//edit  javasript  to vanilla
+const firstLang = document.querySelector("li:first-child")
+const newLii = document.createElement('li')
+newLii.textContent ="Vanilla"
+firstLang.replaceWith(newLii)
+
+
+//remove element say C++
+const lastLanguage = document.querySelector('li:last-child')
+lastLanguage.remove();
+
+</script>
+
+</html>

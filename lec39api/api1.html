@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Here we are going to study old way of XML reqest through AJAX</p>
+</body>
+
+<script>
+
+//Use XMLHttpRequest (XHR) objects to interact with servers.
+//You can retrieve data from a URL without having to do a full page refresh.
+// This enables a Web page to update just part of a page without disrupting what the user is doing.
+
+//here  XHR allow to fetch the details or many think of my github account in console 
+
+       const requestUrl = "https://api.github.com/users/riteshkrofficial"
+      const xhr = new XMLHttpRequest()    //fresh object is made using new keyword
+      xhr.open('GET',requestUrl)
+      xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            // const data = this.responseText
+            // console.log(typeof data);        //datatype is of string formate now to fech any particular property data type must be object
+            // console.log(data.followers);  .
+            // above same code i will write but because the data type is string i wil change the datatype first to object see
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);     //datatype chage to object 
+            console.log(data.public_repos);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            
+        }
+
+      }
+      
+       xhr.send()
+</script>
+
+
+
+</html>
