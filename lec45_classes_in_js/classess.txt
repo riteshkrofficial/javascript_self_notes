@@ -1,0 +1,54 @@
+here we are studied about the classes in js 
+
+
+
+In this we do not need to write function(){} ,we can intialize a funnction or method without writing function
+that is  specilality of using class.
+
+
+
+=>giving a example which will clear the diffrence between before ES6 and after ES6(class era )
+
+BEFORE ES6 THE CODING IS :-
+// Constructor function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Adding a method to the prototype
+Person.prototype.sayHello = function() {
+    console.log('Hello, my name is ' + this.name);
+};
+// Create an instance of Person
+var person = new Person('John', 30);
+
+// Call the sayHello method
+person.sayHello();
+
+
+
+
+
+
+
+
+
+AFTER ES6 APPLIED THE CODING IS (involve class way syntax modern way)
+// Class syntax
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHello() {
+        console.log('Hello, my name is ' + this.name);
+    }
+}
+
+// Create an instance of Person
+var person = new Person('John', 30);
+
+// Call the sayHello method
+person.sayHello();

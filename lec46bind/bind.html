@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+      constructor(){
+        this.library = "React"
+        this.server = "https://localhost:300"
+
+        //requirement 
+        document
+        .querySelector('button')
+        .addEventListener('click',this.handlClick.bind(this))     //bind keyword is used to bind the other property say here this.server is binded 
+      }
+      handlClick(){
+        console.log("Button Clicked");
+        console.log(this.server);       //if only this is written it will return all the property or this.server or any other particular part is written it will return that particular property only 
+      }
+    }
+
+    const app = new React()
+</script>
+</html>
